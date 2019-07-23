@@ -17,6 +17,12 @@
         if(right < (game.width-dodger.width)){
           dodger.style.left = `${left-1}px`
         }
+
+      document.addEventListener("keydown", function(key){
+        if(e.which === "39") {
+          moveDodgerRight;
+        }
+      })
       }
     </script>
   </body>
