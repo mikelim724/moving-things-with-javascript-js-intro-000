@@ -11,13 +11,13 @@
     </div>
     <script>
       // your code here
-      var dodger = document.getElementById('dodger')
+      var dodger = document.getElementById('dodger') //Get dodger id
 
       function moveDodgerRight() {
-        var rightNumbers = dodger.style.left.replace('px', '');
-        var right = parseInt(rightNumbers, 10);
-        if(right < 360) {
-          dodger.style.left = `${right+1}px`;
+        var rightNumbers = dodger.style.left.replace('px', ''); //Get left cordinate of dodger without px
+        var right = parseInt(rightNumbers, 10); //Make the string cordinate into a number
+        if(right < 360) { //Keep going one pixel to the right until hits edge of screen. Screen width is 400px and dodger is 40px wide. So 400-40= 360px is max it can go right.
+          dodger.style.left = `${right+1}px`; //Move dodger to the right
         }
       }
 
